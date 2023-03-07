@@ -1,0 +1,9 @@
+has brightness Number
+Process(mutable image ColorImage)
+	if brightness is not 0
+		for column in image.Height
+		for row in image.Width
+			constant current = image.Colors(column * image.Width + row)
+			image.Colors(column * image.Width + row) = Color((current.Red + brightness).Clamp(0, 255),
+			(current.Green + brightness).Clamp(0, 255),
+			(current.Blue + brightness).Clamp(0, 255))
