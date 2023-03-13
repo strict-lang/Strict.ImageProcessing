@@ -1,3 +1,2 @@
-has Height Number
-has Width Number
+has Size
 mutable Colors
